@@ -5,10 +5,8 @@ import com.project.forest_resource_management.dtos.UserDTO;
 import com.project.forest_resource_management.models.UserEntity;
 import com.project.forest_resource_management.servicies.impl.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.ui.Model;
 
 import java.util.List;
 @CrossOrigin(origins = "http://localhost:63342")
@@ -35,7 +33,7 @@ public class UserController {
     }
 
     @GetMapping("/list")
-    public  String listUser(Model model) {
+    public  String listUser() {
         List<UserEntity> users = userService.findAllUsers();
 //        model.addText("");
         return "";
@@ -47,42 +45,25 @@ public class UserController {
     }
 
     @GetMapping("/login")
-    public String showLoginForm(Model model) {
-//        model.addText("loginDTO");
+    public String showLoginForm(org.springframework.ui.Model model) {
         model.addAttribute("loginDTO", new LoginDTO());
         return "login"; // Trả về view login.html
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody LoginDTO loginDTO) {
-        // Thông thường bạn sẽ kiểm tra tên đăng nhập và mật khẩu tại đây
-        String id = loginDTO.getId();
-        String password = loginDTO.getPassword();
+    public String login(@ModelAttribute LoginDTO loginDTO) {
+        // Kiểm tra thông tin đăng nhập (logic của bạn)
+        boolean isAuthenticated = true; // Chỉ là ví dụ
 
-        // Giả định đăng nhập thành công nếu tên đăng nhập và mật khẩu khớp
-        if ("admin".equals(id) && "password".equals(password)) {
-            return ResponseEntity.ok("Login successful");
+        if (isAuthenticated) {
+            return "redirect:/api/user/main_screen"; // Chuyển hướng đến trang chính khi đăng nhập thành công
         } else {
-            return ResponseEntity.status(401).body("Invalid credentials");
+            return "login"; // Trả về trang đăng nhập nếu thất bại
         }
     }
 
-//    @PostMapping("/login")
-//    public String login(@ModelAttribute LoginDTO loginDTO, Model model) {
-//        // Kiểm tra thông tin đăng nhập (logic của bạn)
-//        boolean isAuthenticated = true; // Chỉ là ví dụ
-//
-//        if (isAuthenticated) {
-//            return "redirect:main_screen"; // Chuyển hướng đến trang chính khi đăng nhập thành công
-//        } else {
-//            model.addAttribute("errorMessage");
-//            return "login"; // Trả về trang đăng nhập nếu thất bại
-//        }
-//    }
-
-    // Tạo phương thức để trả về trang main_screen
     @GetMapping("/main_screen")
     public String showMainScreen() {
-        return "main_screen"; // Trả về trang main_screen.html
+        return "main_screen"; // Trả về view main_screen.html
     }
 }
