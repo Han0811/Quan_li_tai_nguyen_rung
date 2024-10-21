@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html class="html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSDL quản lý tài nguyên rừng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3043238ed0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="resources\css\styles.css">
+    <link rel="stylesheet" href="resources\css\animate.css">
+    <link rel="stylesheet" href="vendors\css\styles.css">
+    <link rel="stylesheet" href="resources\css\main.css">
+    <link rel="stylesheet" href="vendors\css\menu1.css">
+    <link rel="stylesheet" href="resources\css\menu2.css">
+    <script src="resources\js\ac_main.js"></script>
+    <script src="resources\js\ac_ele1.js"></script>
+    <link rel="stylesheet" href="home1.css">
+    <script src="resources\js\ac_menu2.js"></script>
+</head>
+<style>
+
+</style>
+
+<body>
+
+    <div class="div_menu container">
+        <form>
+            <div class="tooltip">
+                <input type="checkbox" class="ckb1" id="checkbox1" name="checkboxes" value="1" onclick="onlyOne(this)">
+                <label class="label1" for="checkbox1"></label>
+                <span class="tooltiptext">Home</span>
+            </div>
+            <br>
+    
+            <div class="tooltip">
+                <input type="checkbox" class="ckb2" id="checkbox2" name="checkboxes" value="2" onclick="onlyOne(this)">
+                <label class="label2" for="checkbox2"></label>
+                <span class="tooltiptext">Hành chính</span>
+            </div>
+            <br>
+    
+            <div class="tooltip">
+                <input type="checkbox" class="ckb3" id="checkbox3" name="checkboxes" value="3" onclick="onlyOne(this)">
+                <label class="label3" for="checkbox3"></label>
+                <span class="tooltiptext">Giống cây trồng</span>
+            </div>
+            <br>
+    
+            <div class="tooltip">
+                <input type="checkbox" class="ckb4" id="checkbox4" name="checkboxes" value="4" onclick="onlyOne(this)">
+                <label class="label4" for="checkbox4"></label>
+                <span class="tooltiptext">Gỗ</span>
+            </div>
+            <br>
+    
+            <div class="tooltip">
+                <input type="checkbox" class="ckb5" id="checkbox5" name="checkboxes" value="5" onclick="onlyOne(this)">
+                <label class="label5" for="checkbox5"></label>
+                <span class="tooltiptext">Động vật</span>
+            </div>
+            <br>
+    
+            <div class="tooltip">
+                <input type="checkbox" class="ckb6" id="checkbox6" name="checkboxes" value="6" onclick="onlyOne(this)">
+                <label class="label6" for="checkbox6"></label>
+                <span class="tooltiptext">Bản đồ</span>
+            </div>
+            <br>
+    
+            <div class="tooltip">
+                <input type="checkbox" class="ckb7" id="checkbox7" name="checkboxes" value="7" onclick="onlyOne(this)">
+                <label class="label7" for="checkbox7"></label>
+                <span class="tooltiptext">Hệ thống</span>
+            </div>
+        </form>
+    </div>
+    <div id="div1" class="div1_back_ground div1_shadow">
+        <div class="div_task ">
+            <div class="div2_back_ground div2_shadow">
+            </div>
+            <div class="div3_back_ground div2_shadow">
+                <label class="bar type_center" for="check">
+                    <input class="input1" type="checkbox" onchange="checkUncheck(this)" id="check">
+                    <span class="top"></span>
+                    <span class="middle"></span>
+                    <span class="bottom"></span>
+                </label>
+            </div>
+            <p style="padding-top: 100px;">click menu</p>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

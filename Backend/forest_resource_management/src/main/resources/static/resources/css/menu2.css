@@ -1,0 +1,46 @@
+.div_menu{
+    
+    position: fixed; /* Cố định vị trí so với màn hình */
+    left: 0;
+    position: absolute;
+    
+    margin-left: 0.5%;
+    width: 60px;
+    border-radius: 5px;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
+    height: 190px;
+}
+
+.c1{
+    background-color: red; /* Màu nền đỏ */
+    border-radius: 5px; /* Bo tròn góc nếu cần */
+    padding: 5px; /* Khoảng cách giữa icon và viền */
+    box-sizing: content-box; /* Đảm bảo padding không ảnh hưởng kích thước */
+  
+}
+
+.img_ele_1{
+    opacity: 1; /* Độ mờ 1 (hiện) */
+    visibility: visible; /* Hiện phần tử */
+    transition: opacity 2s ease, visibility 2s ease; /* Thời gian chuyển tiếp cho cả opacity và visibility */
+
+}
+.img_ele_1:hover{
+    opacity: 0; /* Độ mờ 1 (hiện) */
+    visibility: hidden; /* Hiện phần tử */
+    transition: opacity 2s ease, visibility 2s ease; /* Thời gian chuyển tiếp cho cả opacity và visibility */
+
+}
+.img_ele_2{
+    opacity: 0; /* Độ mờ 1 (hiện) */
+    visibility: hidden; /* Hiện phần tử */
+    transition: opacity 2s ease, visibility 2s ease; /* Thời gian chuyển tiếp cho cả opacity và visibility */
+}
+
+.img_ele_2:hover{
+    opacity: 1; /* Độ mờ 1 (hiện) */
+    visibility: visible; /* Hiện phần tử */
+    transition: opacity 2s ease, visibility 2s ease; /* Thời gian chuyển tiếp cho cả opacity và visibility */
+
+}
