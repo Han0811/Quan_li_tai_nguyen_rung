@@ -1,1 +1,0 @@
-this folder include js code

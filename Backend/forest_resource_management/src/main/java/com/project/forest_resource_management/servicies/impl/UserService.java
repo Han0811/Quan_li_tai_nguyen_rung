@@ -87,7 +87,7 @@ public class UserService implements IUserService {
 
     @Override
     public boolean loginUser(LoginDTO loginDTO) {
-        UserEntity user = userRepository.findById(loginDTO.getId());
+        UserEntity user = userRepository.findById(Integer.parseInt(loginDTO.getId()));
 
         // Kiểm tra xem người dùng có tồn tại và mật khẩu có khớp không
         if (user != null) {
