@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSDL quản lý tài nguyên rừng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3043238ed0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="resources\css\styles.css">
+    <link rel="stylesheet" href="vendors\css\grid.css">
+    <link rel="stylesheet" href="resources\css\animate.css">
+    <link rel="stylesheet" href="vendors\css\styles.css">
+    <link rel="stylesheet" href="resources\css\screen_home.css">
+    <script src="resources\js\ac_screen_home.js"></script>
+</head>
+<style>
+    body {
+        background-image: url(./resources/img/pixel-lake09-susetlake.jpg);
+        /* Đường dẫn đến bức ảnh */
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+        /* Đảm bảo chiều cao 100% của viewport */
+        margin: 0;
+        /* Xóa khoảng cách mặc định của body */
+    }
+</style>
+
+<body>
+    <div  class="div_home_1">
+        <h1 class="type_h1">Chào mừng đến với cơ sở dữ liệu quản lý tài nguyên rừng</h1>
+        <div style="margin: 20px; ">
+            <div class="section group">
+                <button onclick="HanhChinh()" class="col span_1_of_3">
+                    <p>Hành chính</p>
+                </button>
+                <button onclick="Seed()" class="col span_1_of_3">
+                    <p>Giống cây trồng</p>
+                </button>
+                <button onclick="Wood()" class="col span_1_of_3">
+                    <p>Gỗ</p>
+                </button>
+            </div>
+            <div class="clearfix"></div>
+            <div class="section group">
+                <button onclick="Animal()" class="col span_1_of_3">
+                    <p>Động vật</p>
+                </button>
+                <button onclick="Mapp()" class="col span_1_of_3">
+                    <p>Bản đồ</p>
+                </button>
+                <button onclick="System()" class="col span_1_of_3">
+                    <p>Hệ thống</p>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

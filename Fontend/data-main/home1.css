@@ -1,0 +1,249 @@
+.ckb1 {
+    display: none; /* Ẩn checkbox */
+}
+
+.ckb1 + .label1 {
+    display: inline-block;
+    cursor: pointer;
+    width: 40px; /* Kích thước label */
+    height: 40px;
+    background-image: url('resources/svg/home01.svg');
+    background-size: cover;
+}
+
+.ckb1:checked + .label1 {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0px 0px 3.5px rgba(0, 0, 0, 0.5);
+    /* Thay đổi hình ảnh hoặc thêm hiệu ứng khi checkbox được chọn */
+    background-image: url('resources/svg/home11.svg');
+}
+.ckb1 + .label1:hover {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+    /* Thay đổi hình ảnh khi di chuột vào label */
+    background-image: url('resources/svg/home1.svg');
+}
+
+
+
+.ckb2 {
+    display: none; /* Ẩn checkbox */
+}
+
+.ckb2 + .label2 {
+    display: inline-block;
+    cursor: pointer;
+    width: 40px; /* Kích thước label */
+    height: 40px;
+    background-image: url('resources/svg/home02.svg');
+    background-size: cover;
+}
+
+.ckb2:checked + .label2 {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0px 0px 3.5px rgba(0, 0, 0, 0.5);
+    /* Thay đổi hình ảnh hoặc thêm hiệu ứng khi checkbox được chọn */
+    background-image: url('resources/svg/home22.svg');
+}
+.ckb2 + .label2:hover {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+    /* Thay đổi hình ảnh khi di chuột vào label */
+    background-image: url('resources/svg/home2.svg');
+}
+
+
+
+.ckb3 {
+    display: none; /* Ẩn checkbox */
+}
+
+.ckb3 + .label3 {
+    display: inline-block;
+    cursor: pointer;
+    width: 40px; /* Kích thước label */
+    height: 40px;
+    background-image: url('resources/svg/home03.svg');
+    background-size: cover;
+}
+
+.ckb3:checked + .label3 {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0px 0px 3.5px rgba(0, 0, 0, 0.5);
+    /* Thay đổi hình ảnh hoặc thêm hiệu ứng khi checkbox được chọn */
+    background-image: url('resources/svg/home33.svg');
+}
+.ckb3 + .label3:hover {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+    /* Thay đổi hình ảnh khi di chuột vào label */
+    background-image: url('resources/svg/home3.svg');
+}
+
+
+
+.ckb4 {
+    display: none; /* Ẩn checkbox */
+}
+
+.ckb4 + .label4 {
+    display: inline-block;
+    cursor: pointer;
+    width: 40px; /* Kích thước label */
+    height: 40px;
+    background-image: url('resources/svg/home04.svg');
+    background-size: cover;
+}
+
+.ckb4:checked + .label4 {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0px 0px 3.5px rgba(0, 0, 0, 0.5);
+    /* Thay đổi hình ảnh hoặc thêm hiệu ứng khi checkbox được chọn */
+    background-image: url('resources/svg/home44.svg');
+}
+.ckb4 + .label4:hover {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+    /* Thay đổi hình ảnh khi di chuột vào label */
+    background-image: url('resources/svg/home4.svg');
+}
+
+
+
+.ckb5 {
+    display: none; /* Ẩn checkbox */
+}
+
+.ckb5 + .label5 {
+    display: inline-block;
+    cursor: pointer;
+    width: 40px; /* Kích thước label */
+    height: 40px;
+    background-image: url('resources/svg/home05.svg');
+    background-size: cover;
+}
+
+.ckb5:checked + .label5 {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0px 0px 3.5px rgba(0, 0, 0, 0.5);
+    /* Thay đổi hình ảnh hoặc thêm hiệu ứng khi checkbox được chọn */
+    background-image: url('resources/svg/home55.svg');
+}
+.ckb5 + .label5:hover {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+    /* Thay đổi hình ảnh khi di chuột vào label */
+    background-image: url('resources/svg/home5.svg');
+}
+
+
+
+.ckb6 {
+    display: none; /* Ẩn checkbox */
+}
+
+.ckb6 + .label6 {
+    display: inline-block;
+    cursor: pointer;
+    width: 40px; /* Kích thước label */
+    height: 40px;
+    background-image: url('resources/svg/home06.svg');
+    background-size: cover;
+}
+
+.ckb6:checked + .label6 {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0px 0px 3.5px rgba(0, 0, 0, 0.5);
+    /* Thay đổi hình ảnh hoặc thêm hiệu ứng khi checkbox được chọn */
+    background-image: url('resources/svg/home66.svg');
+}
+.ckb6 + .label6:hover {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+    /* Thay đổi hình ảnh khi di chuột vào label */
+    background-image: url('resources/svg/home6.svg');
+}
+
+
+
+.ckb7 {
+    display: none; /* Ẩn checkbox */
+}
+
+.ckb7 + .label7 {
+    display: inline-block;
+    cursor: pointer;
+    width: 40px; /* Kích thước label */
+    height: 40px;
+    background-image: url('resources/svg/home07.svg');
+    background-size: cover;
+}
+
+.ckb7:checked + .label7 {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0px 0px 3.5px rgba(0, 0, 0, 0.5);
+    /* Thay đổi hình ảnh hoặc thêm hiệu ứng khi checkbox được chọn */
+    background-image: url('resources/svg/home77.svg');
+}
+.ckb7 + .label7:hover {
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+    /* Thay đổi hình ảnh khi di chuột vào label */
+    background-image: url('resources/svg/home7.svg');
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    font-size: 11px;
+    white-space: nowrap;
+    
+    height: auto;
+    background-color: #fff;
+    color: black;
+    text-align: center;
+    padding: 8px;
+    border-radius: 8px; /* Bo tròn góc */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+    position: absolute;
+    z-index: 12;
+    left: 50px; /* Đẩy tooltip sang bên trái biểu tượng */
+    top: 20px; /* Căn giữa theo chiều dọc */
+    transform: translateY(-50%); /* Đẩy tooltip lên giữa */
+    opacity: 0;
+    transition: opacity 0s; /* Xuất hiện ngay lập tức */
+    border: none; /* Không có viền */
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1; /* Hiện tooltip khi hover */
+    
+}
+.container {
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang (nếu cần) */
+    height: 100vh; /* Chiều cao của container */
+}
+
+/* Tùy chỉnh thêm cho checkbox */
+

@@ -1,12 +1,10 @@
 package com.project.forest_resource_management.servicies.impl;
 
-import com.project.forest_resource_management.dtos.ChangPasswordDTO;
 import com.project.forest_resource_management.dtos.LoginDTO;
 import com.project.forest_resource_management.dtos.UserDTO;
 import com.project.forest_resource_management.models.UserEntity;
 import com.project.forest_resource_management.repositories.UserRepository;
 import com.project.forest_resource_management.servicies.interfac.IUserService;
-import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -50,6 +48,11 @@ public class UserService implements IUserService {
     }
 
     @Override
+    public UserEntity findByPhone(String phone) {
+        return userRepository.findByPhone(phone);
+    }
+
+    @Override
     public List<UserEntity> findAllUsers() {
         return userRepository.findAll();
     }
@@ -87,7 +90,7 @@ public class UserService implements IUserService {
 
     @Override
     public boolean loginUser(LoginDTO loginDTO) {
-        UserEntity user = userRepository.findById(Integer.parseInt(loginDTO.getId()));
+        UserEntity user = userRepository.findByPhone(loginDTO.getPhone());
 
         // Kiểm tra xem người dùng có tồn tại và mật khẩu có khớp không
         if (user != null) {
@@ -95,6 +98,15 @@ public class UserService implements IUserService {
         }
 
         return false; // Nếu không tìm thấy người dùng
+    }
+
+    @Override
+    public UserEntity sign_up(LoginDTO user) {
+        UserEntity result = new UserEntity();
+        result.setPhone(user.getPhone());
+        result.setPassword(user.getPassword());
+
+        return userRepository.save(result);
     }
 //    @Override
 //    public boolean changePassword(ChangPasswordDTO changPasswordDTO) {

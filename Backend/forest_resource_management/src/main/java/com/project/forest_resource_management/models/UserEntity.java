@@ -18,14 +18,14 @@ import java.util.Set;
 @Accessors(chain = true)
 public class UserEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private int id;
 
-    @Column(name = "first_name")
+    @Column(name = "first_name",nullable = true)
     private String firstName;
 
-    @Column(name = "last_name")
+    @Column(name = "last_name",nullable = true)
     private String lastName;
 
     @ManyToMany(fetch = FetchType.EAGER)
@@ -36,26 +36,26 @@ public class UserEntity {
     )
     private Set<RoleEntity> role_user = new HashSet<>();
 
-    @Column(name = "birth_date")
+    @Column(name = "birth_date",nullable = true)
     private Date birthDate;
 
-    @Column(name = "address")
+    @Column(name = "address",nullable = true)
     private String address;
 
-    @Column(name = "email")
+    @Column(name = "email",nullable = true)
     private String email;
 
-    @Column(name = "phone")
+    @Column(name = "phone",nullable = true)
     private String phone;
 
     @Column(name = "password")
     private String password;
 
-    @Column(name = "is_active")
+    @Column(name = "is_active",nullable = true)
     private boolean isActive;
 
     @ManyToOne
-    @JoinColumn(name = "administrations_id")
+    @JoinColumn(name = "administrations_id", nullable = true)
     private AdministrationEntity administration;
 
     public void setAdministration(int administratorId) {

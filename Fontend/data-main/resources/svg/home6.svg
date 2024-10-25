@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 16 16" fill="none"
+    id="Map-Simple-Destination-Line--Streamline-Majesticons" height="16" width="16">
+    <desc>Map Simple Destination Line Streamline Icon: https://streamlinehq.com</desc>
+    <path stroke="url(#gradientHover)" stroke-linecap="round" stroke-linejoin="round"
+        d="M5.625 2.5 1.875 5v7.5l3.75 -1.875 3.75 1.875 3.75 -2.5V2.5l-3.75 1.875 -3.75 -1.875zm-1.25 5.000624999999999V7.5m2.5 0.000625V7.5m1.875 -1.25 1.25 1.25m1.25 1.25 -1.25 -1.25m0 0 1.25 -1.25m-1.25 1.25 -1.25 1.25"
+        stroke-width="1"></path>
+        <linearGradient id="gradientHover" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:rgb(163, 91, 248);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(71, 80, 235);stop-opacity:1" />
+        </linearGradient>
+</svg>

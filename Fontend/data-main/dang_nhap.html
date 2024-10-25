@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSDL quản lý tài nguyên rừng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3043238ed0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="resources\css\styles.css">
+    <link rel="stylesheet" href="vendors\css\grid.css">
+    <link rel="stylesheet" href="resources\css\animate.css">
+    <link rel="stylesheet" href="vendors\css\styles.css">
+    
+</head>
+<style>
+    body {
+        background-image: url(./resources/img/pixel-lake09-susetlake.jpg);
+        /* Đường dẫn đến bức ảnh */
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        height: 100vh;
+        /* Đảm bảo chiều cao 100% của viewport */
+        margin: 0;
+        /* Xóa khoảng cách mặc định của body */
+    }
+</style>
+
+<body>
+
+    <div id="content_dang_nhap" class="type_grid type_center visible">
+        <h1 class="type_h1">Chào mừng<br>quay trở lại!</h1>
+        <div class="type_center">
+            <p style="margin-top: 100px;" class="type_p">Tên đăng nhập:</p>
+            <input class="type_input type_snape_input" type="text" id="name_user_dang_nhap">
+            <p class="type_p">Mật khẩu:</p>      
+            <input class="type_input type_snape_input" type="password" id="pass_user_dang_nhap">
+            <div>
+                <div class="clearfix"></div>  
+                <a href="quen_mat_khau.html" style="float: left;"class="type_a">Quên mật khẩu?</a>
+                <a href="dang_ki.html" style="float: right;" class="type_a">Chưa có tài khoản.</a> 
+                <div class="clearfix"></div>     
+            </div>
+            <div style="padding-top: 10px;" class="type_snape_button">
+                <button onclick="dang_nhap_success()" type="button" class="type_button" >Đăng nhập</button>
+            </div>  
+            <div style="padding-top: 10px;" class="type_snape_button">     
+            </div>
+        </div>
+    </div>
+    <div id="content_dang_nhap_success" class="type_grid type_center hidden">
+        <div style="margin-top: 70px; ">
+            <h1 class="type_h1">Đăng nhập thành công!</h1>
+            
+        </div>
+        <h2 class="type_h1"></h2>
+        <div style="margin-top: 70px;" class="type_center">
+            <div style="position: relative;" class="">
+                <i class="fa-solid fa-check type_check type_center"></i>
+            </div>
+            <div style="margin-top: 140px;" class="type_snape_button">
+                <button onclick="logg()" class="type_button">Truy cập hệ thống</button>
+            </div>   
+        </div>
+    </div>
+    
+    <script src="resources\js\ac.js"></script>
+</body>
+
+</html>
