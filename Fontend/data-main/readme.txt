@@ -1,1 +1,1 @@
-resouse là tệp code của mình vendors là code đi sao chép
+resouse là tệp code của mình vendors là code đi sao chép conca conca
