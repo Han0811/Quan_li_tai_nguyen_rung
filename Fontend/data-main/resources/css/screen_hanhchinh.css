@@ -1,0 +1,10 @@
+.screen1 {
+    height: 500px;
+    width: 500px;
+
+    background-color: aqua;
+    position: absolute;
+    top: 50%;
+    margin-left: 20px;
+    transform: translate(0%, -50%); /* Căn giữa theo cả hai chiều */
+}

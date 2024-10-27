@@ -1,0 +1,25 @@
+/* this file include color using the website */
+box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.2),
+-6px -6px 10px -1px rgba(255, 255, 255, 0.8);
+border: 1px solid rgba(0, 0, 0, 0);
+
+/////
+
+rgb(232, 232, 232)
+
+/////
+
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+top:0;
+
+/////
+
+position: absolute;
+top: 50%;
+left: 10%;
+transform: translate(-50%, -50%); /* Căn giữa theo cả hai chiều */
+
+
