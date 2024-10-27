@@ -8,11 +8,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/3043238ed0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="resources\css\styles.css">
     <link rel="stylesheet" href="vendors\css\grid.css">
     <link rel="stylesheet" href="resources\css\animate.css">
-    <link rel="stylesheet" href="vendors\css\styles.css">
+    <link rel="stylesheet" href="resources\css\styles.css">
 </head>
 <style>
     body {
@@ -32,20 +31,23 @@
     <div id="content_dang_ki" id class="type_grid type_center visible">
         <h1 class="type_h1">Chào mừng<br>đến với chúng tôi!</h1>
         <div style="margin-top: 25px;" class="type_center">
-            <p class="type_p">Tên đăng nhập:</p>
-            <input class="type_input type_snape_input" type="text" id="name_user">
+            <p class="type_p">Số ĐT:</p>
+            <input class="type_input type_snape_input" type="text" id="phone">
             <p class="type_p">Mật khẩu:</p>
-            <input class="type_input type_snape_input" type="password" id="pass_user_dang_ki">
-            <p class="type_p">Nhập lại mật khẩu:</p>
-            <input class="type_input type_snape_input" type="password" id="re_pass_user_dang_ki">
+            <input class="type_input type_snape_input" type="password" id="password">
             <div>
                 <div class="clearfix"></div>
                 <a href="dang_nhap.html" style="float: left;" class="type_a">Đã có tài khoản?</a>
                 <div class="clearfix"></div>
             </div>
+            <div id="error-message" style="display: none; color: red;">
+                Đăng nhập không thành công, vui lòng thử lại!
+            </div>
+
             <div style="padding-top: 10px;" class="type_snape_button">
                 <button onclick="dang_ki_success()" type="button" class="type_button">Đăng kí</button>
             </div>
+
         </div>
     </div>
     <div id="content_dang_ki_success" class="type_grid type_center hidden">

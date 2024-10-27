@@ -63,15 +63,14 @@ public class UserController {
         // Kiểm tra thông tin đăng nhập (logic của bạn)
         boolean isAuthenticated = userService.loginUser(loginDTO); // Gọi logic kiểm tra đăng nhập
 
+        Map<String, String> errorResponse = new HashMap<>();
         if (isAuthenticated) {
             // Lấy thông tin người dùng từ cơ sở dữ liệu (hoặc từ dịch vụ login)
             UserEntity user = userService.findByPhone(loginDTO.getPhone());
-            Map<String, String> errorResponse = new HashMap<>();
             errorResponse.put("success", "true");
             errorResponse.put("message", "Đăng nhập thành công");
-            return ResponseEntity.ok(user);
+            return ResponseEntity.ok(errorResponse);
         } else {
-            Map<String, String> errorResponse = new HashMap<>();
             errorResponse.put("success", "false");
             errorResponse.put("message", "Tên đăng nhập hoặc mật khẩu không chính xác");
 
@@ -86,14 +85,14 @@ public class UserController {
     public ResponseEntity<?> signUp(@RequestBody LoginDTO loginDTO) {
         UserEntity result = userService.findByPhone(loginDTO.getPhone());
 
+        Map<String, String> errorResponse = new HashMap<>();
         if (result != null) {
-            Map<String, String> errorResponse = new HashMap<>();
+
             errorResponse.put("success", "false");
             errorResponse.put("message","Người dùng đã tồn tại ");
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
         } else {
             userService.sign_up(loginDTO);
-            Map<String, String> errorResponse = new HashMap<>();
             errorResponse.put("success", "true");
             errorResponse.put("message","Đăng kí thành công.");
             return ResponseEntity.ok(errorResponse);
