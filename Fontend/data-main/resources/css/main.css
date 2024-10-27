@@ -1,9 +1,10 @@
-body{
+body {
     background-color: rgb(232, 232, 232);
 }
 
-.div1_back_ground{
-    position: fixed; /* Cố định vị trí so với màn hình */
+.div1_back_ground {
+    position: fixed;
+    /* Cố định vị trí so với màn hình */
     top: 0;
     left: 0;
     right: 0;
@@ -16,44 +17,56 @@ body{
     background-color: rgb(232, 232, 232);
     transition: margin-left 0.5s ease;
 }
+
 .move {
-    margin-left: 70px !important; 
+    margin-left: 70px !important;
 }
-.div_task{
-    position: absolute; 
+
+.div_task {
+    position: absolute;
     top: 5px;
     left: 5px;
     right: 5px;
-    bottom: 5px; 
+    bottom: 5px;
     height: 30px;
-    
-}
-.div2_back_ground{
-    position: absolute; 
-    left: 35px;
-    right: 0;
-    height: 30px;
-    border-radius: 5px;
-    background-color: rgb(232, 232, 232) ;
-}
-.div3_back_ground{
 
-    height: 30px;
-    width: 30px;
-    
-    border-radius: 5px;
-    background-color: rgb(232, 232, 232) ;
 }
-.div1_shadow{
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); 
-}
-.div2_shadow{
+
+.div2_back_ground {
     position: absolute;
-    box-shadow: 0.5px 0.5px 1.5px rgba(0, 0, 0, 0.5); 
+    left: 60px;
+    right: 0;
+    height: 50px;
+    border-radius: 5px;
+    background-color: rgb(232, 232, 232);
 }
 
-.div2_2{
-    position: fixed; /* Cố định vị trí so với màn hình */
+.div3_back_ground {
+
+    height: 40px;
+    width: 40px;
+
+    border-radius: 5px;
+    background-color: rgb(232, 232, 232);
+}
+
+.div1_shadow {
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.2),
+-6px -6px 10px -1px rgba(255, 255, 255, 0.8);
+border: 1px solid rgba(0, 0, 0, 0);
+
+}
+
+.div3_shadow {
+    position: absolute;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.2),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.div2_2 {
+    position: fixed;
+    /* Cố định vị trí so với màn hình */
     top: 0;
     left: 0;
     right: 0;
@@ -67,6 +80,33 @@ body{
     border-radius: 5px;
     width: 60px;
 }
-.gradien_color{
+
+.gradien_color {
     color: linear-gradient(to top right, rgb(163, 91, 248), rgb(71, 80, 235)) !important;
 }
+
+.icon_account {
+    height: 40px;
+    width: 40px;
+    
+    /* Loại bỏ kiểu mặc định của nút */
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+
+    /* Định dạng icon */
+    position: absolute;
+    top: 0;
+    right: 5px;
+    border-radius: 50%;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.2),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.8);
+        transition: all 0.2s ease-in-out; 
+
+}
+.icon_account:hover{
+    
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+}
+

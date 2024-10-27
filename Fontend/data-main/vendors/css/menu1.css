@@ -8,16 +8,16 @@
   display: block;
   position: relative;
   cursor: pointer;
-  width: 25px;
-  height: 25px;
+  width: 35px;
+  height: 35px;
 }
 
 .bar span {
   position: absolute;
-  width: 25px;
-  height: 4px;
+  width: 35px;
+  height: 4.5px;
   background: linear-gradient(to top right, rgb(163, 91, 248), rgb(71, 80, 235));
-  border-radius: 100px;
+  border-radius: 10px;
   display: inline-block;
   transition: 0.3s ease;
   left: 0;
@@ -28,7 +28,7 @@
 }
 
 .bar span.middle {
-  top: 10.5px;
+  top: 15px;
 }
 
 .bar span.bottom {
@@ -38,16 +38,16 @@
 .input1[type]:checked ~ span.top {
   transform: rotate(45deg);
   transform-origin: top left;
-  width: 30px;
-  left: 3px;
+  width: 44px;
+  left: 4px;
 }
 
 .input1[type]:checked ~ span.bottom {
   transform: rotate(-45deg);
   transform-origin: top left;
-  width: 30px;
-  bottom: -0.5px;
-  box-shadow: 0 0 10px #495057;
+  width: 44px;
+  bottom: -1px;
+ 
 }
 
 .input1[type]:checked ~ span.middle {
@@ -59,7 +59,7 @@
   height: 60px;
   background-color: rgb(255, 255, 255);
   border-radius: 40px;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.041);
+  
   align-items: center;
   justify-content: center;
   display: flex;
