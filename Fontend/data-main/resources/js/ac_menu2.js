@@ -24,7 +24,7 @@ function onlyOne(checkbox) {
             mainHtml.src = "screen_animal.html";
             break;
         case "6":
-            mainHtml.src = "screen_seed.html";
+            mainHtml.src = "screen_map.html";
             break;
         case "7":
             mainHtml.src = "screen_system.html";
