@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="resources\css\styles.css">
     <link rel="stylesheet" href="vendors\css\grid.css">
     <link rel="stylesheet" href="resources\css\animate.css">
-    <link rel="stylesheet" href="vendors\css\styles.css">
+    <link rel="stylesheet" href="data-main\vendors\css\styles.css">
     
 </head>
 <style>
@@ -35,14 +35,17 @@
         <h1 class="type_h1">Chào mừng<br>quay trở lại!</h1>
         <div class="type_center">
             <p style="margin-top: 100px;" class="type_p">Tên đăng nhập:</p>
-            <input class="type_input type_snape_input" type="text" id="name_user_dang_nhap">
+            <input class="type_input type_snape_input" type="text" id="phone">
             <p class="type_p">Mật khẩu:</p>      
-            <input class="type_input type_snape_input" type="password" id="pass_user_dang_nhap">
+            <input class="type_input type_snape_input" type="password" id="password">
             <div>
                 <div class="clearfix"></div>  
-                <a href="quen_mat_khau.html" style="float: left;"class="type_a">Quên mật khẩu?</a>
-                <a href="dang_ki.html" style="float: right;" class="type_a">Chưa có tài khoản.</a> 
+                <a href="quen_mat_khau.html" style="float: left;"class="type_c">Quên mật khẩu?</a>
+                <a href="dang_ki.html" style="float: right;" class="type_b">Chưa có tài khoản.</a>
                 <div class="clearfix"></div>     
+            </div>
+            <div id="error-message" style="display: none; color: red;">
+                Đăng nhập không thành công, vui lòng thử lại!
             </div>
             <div style="padding-top: 10px;" class="type_snape_button">
                 <button onclick="dang_nhap_success()" type="button" class="type_button" >Đăng nhập</button>
@@ -67,7 +70,7 @@
         </div>
     </div>
     
-    <script src="resources\js\ac.js"></script>
+    <script src="resources\js\ac-login.js"></script>
 </body>
 
 </html>
