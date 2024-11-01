@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display JSON Data with Button</title>
+    <title>Display JSON Data from File</title>
     <style>
-        /* Định dạng chung cho từng item trong danh sách */
         #user-list li {
             margin-bottom: 10px;
             padding: 10px;
@@ -14,20 +13,17 @@
             width: 250px;
             background-color: #f9f9f9;
         }
-        /* Định dạng riêng cho tên */
         .user-name {
             font-weight: bold;
             font-size: 1.2em;
             color: #333;
         }
-        /* Định dạng riêng cho email */
         .user-email {
             display: block;
             font-size: 0.9em;
             color: #555;
             margin-top: 4px;
         }
-        /* Định dạng cho nút lấy dữ liệu */
         #fetch-btn {
             margin-bottom: 20px;
             padding: 10px 20px;
@@ -38,7 +34,6 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        /* Khi nút bị vô hiệu hóa */
         #fetch-btn:disabled {
             background-color: #ddd;
             cursor: not-allowed;
@@ -51,44 +46,33 @@
     <ul id="user-list"></ul>
 
     <script>
-        // Hàm lấy dữ liệu từ API và hiển thị
         function fetchData() {
-            fetch('http://localhost:5000/api/get-json')
-                .then(response => response.json())
-                .then(data => {
-                    // Vô hiệu hóa nút sau khi dữ liệu đã được tải
-                    document.getElementById('fetch-btn').disabled = true;
-                })
-                .catch(error => console.error('Error fetching data:', error));
-        }
-        fetch('users.json')
+            fetch('users.json')
                 .then(response => response.json())
                 .then(data => {
                     const userList = document.getElementById('user-list');
-                    
+                    userList.innerHTML = '';
+
                     data.users.forEach(user => {
                         const listItem = document.createElement('li');
-                        
-                        // Tạo span cho tên người dùng
                         const nameSpan = document.createElement('span');
                         nameSpan.className = 'user-name';
                         nameSpan.textContent = user.name;
 
-                        // Tạo span cho email người dùng
                         const emailSpan = document.createElement('span');
                         emailSpan.className = 'user-email';
                         emailSpan.textContent = user.email;
 
-                        // Thêm cả hai span vào listItem
                         listItem.appendChild(nameSpan);
                         listItem.appendChild(emailSpan);
                         userList.appendChild(listItem);
                     });
+
+                    document.getElementById('fetch-btn').disabled = true;
                 })
                 .catch(error => console.error('Error fetching data:', error));
-        
+        }
 
-        // Thêm sự kiện click vào nút để chỉ lấy dữ liệu một lần
         document.getElementById('fetch-btn').addEventListener('click', fetchData);
     </script>
 </body>

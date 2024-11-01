@@ -3,8 +3,8 @@ import json
 
 app = Flask(__name__)
 
-@app.route('/api/get-json', methods=['GET'])
-def get_json():
+@app.route('/api/generate-json', methods=['GET'])
+def generate_json():
     # Dữ liệu mẫu
     data = {
         "users": [
@@ -14,12 +14,12 @@ def get_json():
         ]
     }
     
-    # Lưu dữ liệu vào file JSON
+    # Ghi dữ liệu vào tệp JSON
     with open('users.json', 'w') as f:
         json.dump(data, f)
     
-    # Trả file JSON về client
-    return send_file('users.json', as_attachment=False)
+    # Xác nhận việc tạo file JSON
+    return jsonify({"message": "File 'users.json' created successfully!"})
 
 if __name__ == '__main__':
     app.run(debug=True)
