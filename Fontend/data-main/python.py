@@ -40,7 +40,7 @@ def generate_json():
     call_count += 1
     
     # Ghi dữ liệu vào tệp JSON
-    with open('users.json', 'w') as f:
+    with open('Fontend\\data-main\\users.json', 'w') as f:
         json.dump(data, f)
     
     # In thông báo xác nhận
@@ -52,8 +52,8 @@ def generate_json():
 @app.route('/api/generate1-json', methods=['GET'])
 def generate_json1():
     # Xóa tệp nếu tồn tại
-    if os.path.exists('users.json'):
-        os.remove('users.json')
+    if os.path.exists('Fontend\\data-main\\users.json'):
+        os.remove('Fontend\\data-main\\users.json')
         return jsonify({"message": "File 'users.json' deleted successfully!"})
     else:
         return jsonify({"error": "File 'users.json' does not exist."}), 404
