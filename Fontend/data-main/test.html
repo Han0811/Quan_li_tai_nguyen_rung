@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,17 +14,20 @@
             width: 250px;
             background-color: #f9f9f9;
         }
+
         .user-name {
             font-weight: bold;
             font-size: 1.2em;
             color: #333;
         }
+
         .user-email {
             display: block;
             font-size: 0.9em;
             color: #555;
             margin-top: 4px;
         }
+
         #fetch-btn {
             margin-bottom: 20px;
             padding: 10px 20px;
@@ -34,16 +38,19 @@
             border-radius: 5px;
             cursor: pointer;
         }
+
         #fetch-btn:disabled {
             background-color: #ddd;
             cursor: not-allowed;
         }
     </style>
 </head>
+
 <body>
     <h1>User List</h1>
     <button id="fetch-btn">Lấy Dữ Liệu</button>
     <ul id="user-list"></ul>
+    <button id="reset-btn" onclick="resetPage()">câp nhật Dữ Liệu</button>
 
     <script>
         {
@@ -76,11 +83,34 @@
             fetch('http://127.0.0.1:5000/api/generate-json')
                 .then(response => response.json())
                 .then(data => {
-                  document.getElementById('fetch-btn').disabled = true;
+                    document.getElementById('fetch-btn').disabled = true;
                 })
                 .catch(error => console.error('Error fetching data:', error));
-        }       
+        }
         document.getElementById('fetch-btn').addEventListener('click', fetchData);
+
+        function resetPage() {
+            fetch('http://127.0.0.1:5000/api/generate1-json')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('fetch-btn').disabled = true;
+                })
+                .catch(error => console.error('Error fetching data:', error));
+            location.reload();
+            
+        }
+        const fs = require('fs');
+
+        function deleteFile(filePath) {
+            fs.unlink(filePath, (err) => {
+                if (err) {
+                    console.error("Lỗi khi xóa file:", err);
+                } else {
+                    console.log("Đã xóa file thành công!");
+                }
+            });
+        }
     </script>
 </body>
+
 </html>
